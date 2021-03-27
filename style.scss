@@ -1,5 +1,90 @@
-$red: #ffff00;
+$light: #F9F6F1;
+$dark: #212121;
+$accent: #D7B399;
+$grey: #F9F6F1;
+$light-grey: #F4F4F4;
+$dark-grey: #8D8D8D;
+$important: #D84033;
 
-h1 {
-  color: $red;
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page-light {
+  background-color: $light;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1110px;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > div {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+
+  &-link {
+    color: $dark;
+    text-decoration: none;
+    transition: .2s all;
+  }
+
+  &-link:hover {
+    color: $accent;
+  }
+}
+
+header .logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+header .cart {
+  width: 100px;
+  height: 30px;
+  background-image: url(../img/cart.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+
+  &-count {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $accent;
+    height: 30px;
+    width: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 60px;
+    padding-right: 5px;
+  }
+  &-count::before {
+    content: '';
+    display: flex;
+    position: absolute;
+    left: -30px;
+    border: 15px solid transparent;
+    border-right: 15px solid $accent;
+  }
 }
